@@ -1,15 +1,34 @@
-package com.anhtester.Bai5_LocatorElement;
+package com.junvu;
 
 public class LocatorsCRM {
 
+    //Xpath tương đối cách 1 đến 5
     //Login page
     public static String headerLogin = "//h1[normalize-space()='Login']";
     public static String inputEmail = "//input[@id='email']";
     public static String inputPassword = "//input[@id='password']";
     public static String buttonLogin = "//button[normalize-space()='Login']";
-    public static String checkboxRememberMe = "//input[@id='remember']"; //HTML là thẻ input nhưng giao diện là checkbox nên đặt tên biến là checkbox
-    public static String linkForgotPassword = "//a[normalize-space()='Forgot Password?']"; //Forgot Password là key text, ít khi thay đổi (giao diện hiện là link nên đặt tên biến là link
-    public static String alertErrorMessage = "//div[@id='alerts']/div";
+    public static String checkboxRememberMe = "//input[@id='remember']";
+    public static String linkForgotPassword = "//a[normalize-space()='Forgot Password?']";
+    public static String alertErrorMessage = "//div[@id='alerts']/div"; //Wrong ID or password
+    public static String alertDangerMes1 = "//div[(contains(@class,'alert-danger')) and (normalize-space()='The Password field is required.')]"; // Password is empty
+    public static String alertDangerMes2 = "//div[starts-with(@class,'alert alert-danger') and (normalize-space()='The Email Address field is required.')]"; // Email address is empty
+
+
+    //Customer page
+    public static String menuCustomer = "//li[(@class='menu-item-customers active') and (normalize-space()='Customers')]";
+    public static String headerCustomer = "//span[normalize-space()='Customers Summary']";
+
+    //Đang ở đây
+    //New Customer
+
+
+    //Xpath tương đối cách 6 đến 10
+
+    //Projects page
+
+    // New Project
+
 
     //Dashboard page
     //Hàm wait for element visible: xác định element hiển thị đầy đủ
@@ -21,9 +40,6 @@ public class LocatorsCRM {
     public static String totalConvertedLeads = "(//span[normalize-space()='Converted Leads']/parent::div)/following-sibling::span";
     public static String totalProjectsInProgress = "(//span[normalize-space()='Projects In Progress']/parent::div)/following-sibling::span";
     public static String totalTasksNotFinished = "(//span[normalize-space()='Tasks Not Finished']/parent::div)/following-sibling::span";
-
-    //Customer page
-    public static String headerCustomer = "//span[normalize-space()='Customers Summary']";
 
 
 }

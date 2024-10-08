@@ -1,4 +1,4 @@
-package com.anhtester.Bai5_LocatorElement;
+package com.junvu.Bai5_LocatorElement;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

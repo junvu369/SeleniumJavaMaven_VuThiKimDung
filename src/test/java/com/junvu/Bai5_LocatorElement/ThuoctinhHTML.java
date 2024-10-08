@@ -1,10 +1,9 @@
-package com.anhtester.Bai5_LocatorElement;
+package com.junvu.Bai5_LocatorElement;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.sql.Driver;
 import java.time.Duration;
 
 public class ThuoctinhHTML {
