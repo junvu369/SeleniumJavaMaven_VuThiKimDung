@@ -18,6 +18,11 @@ public class LocatorsCRM {
     //Customer page
     public static String menuCustomer = "//li[(@class='menu-item-customers active') and (normalize-space()='Customers')]";
     public static String headerCustomer = "//span[normalize-space()='Customers Summary']";
+    public static String searchBox = "//input[(@id='search_input')]";
+    public static String buttonSearch = "//i[(@class='fa fa-search')]";
+    public static String buttonNewCustomer = "//a[(@href='https://crm.anhtester.com/admin/clients/client') and (normalize-space()='New Customer')]";
+    public static String buttonImportCustomers = "";
+
 
     //Đang ở đây
     //New Customer
