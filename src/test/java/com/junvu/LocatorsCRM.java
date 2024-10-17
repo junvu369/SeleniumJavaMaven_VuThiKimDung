@@ -15,7 +15,7 @@ public class LocatorsCRM {
     public static String alertDangerMes2 = "//div[starts-with(@class,'alert alert-danger') and (normalize-space()='The Email Address field is required.')]"; // Email address is empty
 
     //Customer page
-    public static String menuCustomer = "//li[(@class='menu-item-customers active') and (normalize-space()='Customers')]";
+    public static String menuCustomer = "//li[(@class='menu-item-customers') and (normalize-space()='Customers')]";
     public static String searchBoxHeaderC = "//input[(@id='search_input')]";
     public static String buttonSearchC = "//i[(@class='fa fa-search')]";
     public static String headerCustomer = "//span[normalize-space()='Customers Summary']";
@@ -44,15 +44,16 @@ public class LocatorsCRM {
     public static String textboxVATNumber = "//input[(@type='text') and (@id='vat')]";
     public static String textboxPhone = "//input[(@type='text') and (@id='phonenumber')]";
     public static String website = "//input[(@type='text') and (@id='website')]";
-    public static String dropdownlistGroups = "(//div[(@class='filter-option-inner')]//div[(normalize-space()='Nothing selected')])[1]";
+    public static String dropdownlistGroups = "//button[@data-id='groups_in[]']";
     public static String buttonCreateNewGroup = "//a[@class='btn btn-default']";
-    public static String dropdownlistCurrency = "(//div[(@class='filter-option-inner')]//div[(normalize-space()='System Default')])[1]";
-    public static String dropdownlistDefaultLang = "(//div[(@class='filter-option-inner')]//div[(normalize-space()='System Default')])[2]";
+    public static String dropdownlistCurrency = "//button[@data-id='default_currency']";
+    //Xem lại locator đoạn này
+    public static String dropdownlistDefaultLang = "//button[@data-id='default_language']";
     public static String textboxAddress = "//textarea[@id='address']";
     public static String textboxCity = "//input[(@type='text') and (@id='city')]";
     public static String textboxState = "//input[(@type='text') and (@id='state')]";
     public static String textboxZipCode = "//input[(@type='text') and (@id='zip')]";
-    public static String dropdownlistCountry = "(//div[(@class='filter-option-inner')]//div[(normalize-space()='Nothing selected')])[2]";
+    public static String dropdownlistCountry = "//button[@data-id='country']";
     public static String buttonSaveandCreateContactC = "//button[normalize-space()='Save and create contact']";
     public static String buttonSaveC = "(//button[normalize-space()='Save'])[2]";
     public static String errorMessageCustomer = "//p[(@id='company-error') and (normalize-space()='This field is required.')]"; //Bỏ trống trường Company
@@ -64,13 +65,13 @@ public class LocatorsCRM {
     public static String textboxBillingCity = "//input[@id='billing_city']";
     public static String textboxBillingState = "//input[@id='billing_state']";
     public static String textboxBillingZipCode = "//input[@id='billing_zip']";
-    public static String dropdownlistBillingCountry = "(//div[(@class='filter-option-inner')]//div[(normalize-space()='Nothing selected')])[3]";
+    public static String dropdownlistBillingCountry = "//select[@id='billing_country']";
     // Shipping Address
     public static String textboxShippingStreet = "//textarea[@id='shipping_street']";
     public static String textboxShippingCity = "//input[@id='shipping_city']";
     public static String textboxShippingState = "//input[@id='shipping_state']";
     public static String textboxShippingZipCode = "//input[@id='shipping_zip']";
-    public static String dropdownlistShippingCountry = "(//div[(@class='filter-option-inner')]//div[(normalize-space()='Nothing selected')])[4]";
+    public static String dropdownlistShippingCountry = "//select[@id='shipping_country']";
     public static String buttonSaveandCreateContactB = "//button[normalize-space()='Save and create contact']";
     public static String buttonSaveB = "(//button[normalize-space()='Save'])[2]";
 
@@ -99,13 +100,13 @@ public class LocatorsCRM {
     //Project tab
     public static String projectTab = "(//ul[@class='nav nav-tabs nav-tabs-horizontal']/li[@role='presentation']/child::a)[1]";
     public static String textboxProjectName = "//div[@class='form-group']//label[contains(normalize-space(),'Project Name')]/following-sibling::input";
-    public static String dropdownlistCustomer = "(//div[@class='filter-option-inner']/child::div[normalize-space()='Select and begin typing'])[1]";
+    public static String dropdownlistCustomer = "//label[@for='clientid']/following-sibling::div/button[@class='btn dropdown-toggle bs-placeholder btn-default']";
     public static String checkboxCalculate = "//div[@class='checkbox checkbox-success']/child::input";
     public static String progressBar = "//div[@class='tab-content tw-mt-3']/descendant::div/span[@class='ui-slider-handle ui-corner-all ui-state-default']";
-    public static String dropdownlistbillingType = "//label[@for='billing_type']/following-sibling::div[@class='dropdown bootstrap-select bs3']/descendant::div[@class='filter-option-inner-inner']";
-    public static String dropdownlistStatus = "//div[@class='form-group']/descendant::div[@class='filter-option-inner-inner' and normalize-space()='In Progress']";
+    public static String dropdownlistbillingType = "//label[@for='billing_type']/following-sibling::div/select[@id='billing_type']";
+    public static String dropdownlistStatus = "//div/label[@for='status']/following-sibling::div/button[@class='btn dropdown-toggle btn-default']";
     public static String textboxEstimatedHours = "//label[@for='estimated_hours']/following-sibling::input";
-    public static String dropdownlistMember = "//div[@class='form-group']/descendant::div[@class='filter-option-inner-inner' and normalize-space()='Admin Example']";
+    public static String dropdownlistMember = "//div/label[normalize-space()='Members']/following-sibling::div/select[@id='project_members[]']";
     public static String startdateTextbox = "//label[@for='start_date']/following-sibling::div/input[@id='start_date']";
     public static String startdateDatepicker = "//label[@for='start_date']/following-sibling::div/div[@class='input-group-addon']";
     public static String dealineTextbox = "//div/label[@for='deadline']/following::div/input[@id='deadline']";
@@ -116,16 +117,44 @@ public class LocatorsCRM {
     public static String descriptionView = "//div[@class='tox-editor-header']//descendant::button/span[normalize-space()='View']";
     public static String descriptionInsert = "//div[@class='tox-editor-header']//descendant::button/span[normalize-space()='Insert']";
     public static String descriptionFormat = "//div[@class='tox-editor-header']//descendant::button/span[normalize-space()='Format']";
-    //Đang ở đây
-
-
-
+    public static String descriptionTools = "//div[@class='tox-editor-header']//descendant::button/span[normalize-space()='Tools']";
+    public static String descriptionTable = "//div[@class='tox-editor-header']//descendant::button/span[normalize-space()='Table']";
+    public static String descriptionFont = "(//div[@class='tox-editor-header']//descendant::button/span[@class='tox-tbtn__select-label'])[1]";
+    public static String descriptionFontSize = "(//div[@class='tox-editor-header']//descendant::button/span[@class='tox-tbtn__select-label'])[2]";
+    public static String descriptionTextColor = "(//div[@role='group']/descendant::span[@class='tox-tbtn tox-split-button__chevron'])[1]";
+    public static String descriptionBackgroundColor = "(//div[@role='group']/descendant::span[@class='tox-tbtn tox-split-button__chevron'])[2]";
+    public static String descriptionBold = "(//div[@role='group']/descendant::span[@class='tox-icon tox-tbtn__icon-wrap'])[3]";
+    public static String descriptionItalic = "(//div[@role='group']/descendant::span[@class='tox-icon tox-tbtn__icon-wrap'])[4]";
+    public static String descriptionAlignLeft = "(//div[@role='group']/descendant::span[@class='tox-icon tox-tbtn__icon-wrap'])[5]";
+    public static String descriptionCenter = "(//div[@role='group']/descendant::span[@class='tox-icon tox-tbtn__icon-wrap'])[6]";
+    public static String descriptionAlignRight = "(//div[@role='group']/descendant::span[@class='tox-icon tox-tbtn__icon-wrap'])[7]";
+    public static String descriptionJustify = "(//div[@role='group']/descendant::span[@class='tox-icon tox-tbtn__icon-wrap'])[8]";
+    public static String descriptionMoreOptions = "(//div[@role='group']/descendant::span[@class='tox-icon tox-tbtn__icon-wrap'])[9]";
+    public static String descriptionTextbox = "//div[@role='application']/descendant::div[@class='tox-edit-area']";
+    public static String sendCreatedemail = "//div[@class='checkbox checkbox-primary tw-mb-0']/child::input[@id='send_created_email']";
+    public static String buttonSaveP = "//div[@class='panel-footer text-right']/child::button[@type='submit']";
 
     //Project Settings tab
     public static String projectSettingsTab = "(//ul[@class='nav nav-tabs nav-tabs-horizontal']/li[@role='presentation']/child::a)[2]";
-
-
+    public static String sendContactsNotifications = "//label[@for='contact_notification']/following-sibling::div/select[@id='contact_notification']";
+    public static String visibleTabs = "//div/label[normalize-space()='Visible Tabs']/following-sibling::div/select[@id='available_features']";
+    public static String allowCustomerToViewTasks = "//div[@class='checkbox']/child::input[@id='view_tasks']";
+    public static String allowCustomerToCreateTasks = "//div[@class='checkbox']/child::input[@id='create_tasks']";
+    public static String allowCustomerToEditTasks = "//div[@class='checkbox']/child::input[@id='edit_tasks']";
+    public static String allowCustomerToCommentOnTasks = "//div[@class='checkbox']/child::input[@id='comment_on_tasks']";
+    public static String allowCustomerToViewComments = "//div[@class='checkbox']/child::input[@id='view_task_comments']";
+    public static String allowCustomerToViewTasksAttachments = "//div[@class='checkbox']/child::input[@id='view_task_attachments']";
+    public static String allowCustomerToViewTasksChecklist = "//div[@class='checkbox']/child::input[@id='view_task_checklist_items']";
+    public static String allowCustomerToUploadAttachments = "//div[@class='checkbox']/child::input[@id='upload_on_tasks']";
+    public static String allowCustomerToViewTotalloggedTime = "//div[@class='checkbox']/child::input[@id='view_task_total_logged_time']";
+    public static String allowCustomerToViewFinanceOverview = "//div[@class='checkbox']/child::input[@id='view_finance_overview']";
+    public static String allowCustomerToUploadFiles = "//div[@class='checkbox']/child::input[@id='upload_files']";
+    public static String allowCustomerToOpenDiscussion = "//div[@class='checkbox']/child::input[@id='open_discussions']";
+    public static String allowCustomerToViewMilestones = "//div[@class='checkbox']/child::input[@id='view_milestones']";
+    public static String allowCustomerToViewGantt = "//div[@class='checkbox']/child::input[@id='view_gantt']";
+    public static String allowCustomerToViewTimeSheets = "//div[@class='checkbox']/child::input[@id='view_timesheets']";
+    public static String allowCustomerToViewActivityLogs = "//div[@class='checkbox']/child::input[@id='view_activity_log']";
+    public static String allowCustomerToViewTeamMembers = "//div[@class='checkbox']/child::input[@id='view_team_members']";
+    public static String hideProjectTasksOnMainTasksTable = "//div[@class='checkbox']/child::input[@id='hide_tasks_on_main_tasks_table']";
+    public static String buttonSavePS = "//div[@class='panel-footer text-right']/child::button[@type='submit']";
 }
-
-
-
