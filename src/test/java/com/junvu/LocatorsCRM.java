@@ -47,7 +47,6 @@ public class LocatorsCRM {
     public static String dropdownlistGroups = "//button[@data-id='groups_in[]']";
     public static String buttonCreateNewGroup = "//a[@class='btn btn-default']";
     public static String dropdownlistCurrency = "//button[@data-id='default_currency']";
-    //Xem lại locator đoạn này
     public static String dropdownlistDefaultLang = "//button[@data-id='default_language']";
     public static String textboxAddress = "//textarea[@id='address']";
     public static String textboxCity = "//input[(@type='text') and (@id='city')]";
@@ -65,13 +64,13 @@ public class LocatorsCRM {
     public static String textboxBillingCity = "//input[@id='billing_city']";
     public static String textboxBillingState = "//input[@id='billing_state']";
     public static String textboxBillingZipCode = "//input[@id='billing_zip']";
-    public static String dropdownlistBillingCountry = "//select[@id='billing_country']";
+    public static String dropdownlistBillingCountry = "//button[@data-id='billing_country']";
     // Shipping Address
     public static String textboxShippingStreet = "//textarea[@id='shipping_street']";
     public static String textboxShippingCity = "//input[@id='shipping_city']";
     public static String textboxShippingState = "//input[@id='shipping_state']";
     public static String textboxShippingZipCode = "//input[@id='shipping_zip']";
-    public static String dropdownlistShippingCountry = "//select[@id='shipping_country']";
+    public static String dropdownlistShippingCountry = "//button[@data-id='shipping_country']";
     public static String buttonSaveandCreateContactB = "//button[normalize-space()='Save and create contact']";
     public static String buttonSaveB = "(//button[normalize-space()='Save'])[2]";
 
