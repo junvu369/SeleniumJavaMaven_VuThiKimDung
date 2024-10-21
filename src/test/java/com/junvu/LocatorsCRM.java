@@ -99,11 +99,12 @@ public class LocatorsCRM {
     //Project tab
     public static String projectTab = "(//ul[@class='nav nav-tabs nav-tabs-horizontal']/li[@role='presentation']/child::a)[1]";
     public static String textboxProjectName = "//div[@class='form-group']//label[contains(normalize-space(),'Project Name')]/following-sibling::input";
-    public static String dropdownlistCustomer = "//label[@for='clientid']/following-sibling::div/button[@class='btn dropdown-toggle bs-placeholder btn-default']";
+    public static String dropdownlistCustomer = "//label[@for='clientid']/following-sibling::div/button[@aria-owns='bs-select-6']";
     public static String checkboxCalculate = "//div[@class='checkbox checkbox-success']/child::input";
     public static String progressBar = "//div[@class='tab-content tw-mt-3']/descendant::div/span[@class='ui-slider-handle ui-corner-all ui-state-default']";
     public static String dropdownlistbillingType = "//label[@for='billing_type']/following-sibling::div/select[@id='billing_type']";
-    public static String dropdownlistStatus = "//div/label[@for='status']/following-sibling::div/button[@class='btn dropdown-toggle btn-default']";
+    public static String dropdownlistStatus = "//div/label[@for='status']/following-sibling::div/button[@aria-owns='bs-select-2']";
+    public static String textboxTotalRate = "//div[@id='project_cost']/descendant::input[@id='project_cost']";
     public static String textboxEstimatedHours = "//label[@for='estimated_hours']/following-sibling::input";
     public static String dropdownlistMember = "//div/label[normalize-space()='Members']/following-sibling::div/select[@id='project_members[]']";
     public static String startdateTextbox = "//label[@for='start_date']/following-sibling::div/input[@id='start_date']";
