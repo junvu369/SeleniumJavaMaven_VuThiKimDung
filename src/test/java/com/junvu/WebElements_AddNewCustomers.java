@@ -75,6 +75,7 @@ public class WebElements_AddNewCustomers extends BaseTest {
         driver.findElement(By.xpath("//input[@aria-controls='bs-select-5']")).sendKeys("Vietnam");
         driver.findElement(By.xpath("//a[@id='bs-select-5-243']/child::span[normalize-space()='Vietnam']")).click();
         Thread.sleep(1000);
+        
         //Nhập thông tin phần Shipping Address
         driver.findElement(By.xpath(LocatorsCRM.textboxShippingStreet)).sendKeys("Vũ Tông Phan");
         driver.findElement(By.xpath(LocatorsCRM.textboxShippingCity)).sendKeys("Hà Nội");
