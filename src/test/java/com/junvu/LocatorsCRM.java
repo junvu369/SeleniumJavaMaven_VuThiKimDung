@@ -18,14 +18,14 @@ public class LocatorsCRM {
     public static String menuCustomer = "//li[(@class='menu-item-customers') and (normalize-space()='Customers')]";
     public static String searchBoxHeaderC = "//input[(@id='search_input')]";
     public static String buttonSearchC = "//i[(@class='fa fa-search')]";
-    public static String headerCustomer = "//span[normalize-space()='Customers Summary']";
+    public static String headerCustomerPage = "//div[@id='customers_bulk_action']/ancestor::div//span[normalize-space()='Customers Summary']";
     public static String totalCustomers = "(//div[contains(@class,'tw-grid')]//span[contains(@class,'tw-font-semibold')])[1]";
     public static String activeCustomers = "(//div[contains(@class,'tw-grid')]//span[contains(@class,'tw-font-semibold')])[2]";
     public static String inactiveCustomers = "(//div[contains(@class,'tw-grid')]//span[contains(@class,'tw-font-semibold')])[3]";
     public static String activeContacts = "(//div[contains(@class,'tw-grid')]//span[contains(@class,'tw-font-semibold')])[4]";
     public static String inactiveContacts = "(//div[contains(@class,'tw-grid')]//span[contains(@class,'tw-font-semibold')])[5]";
     public static String contactLoggedInToday = "(//div[contains(@class,'tw-grid')]//span[contains(@class,'tw-font-semibold')])[6]";
-    public static String buttonNewCustomer = "//a[(@href='https://crm.anhtester.com/admin/clients/client') and (normalize-space()='New Customer')]";
+    public static String buttonAddNewCustomer = "//a[(@href='https://crm.anhtester.com/admin/clients/client') and (normalize-space()='New Customer')]";
     public static String buttonImportCustomers = "//a[(@href='https://crm.anhtester.com/admin/clients/import') and (normalize-space()='Import Customers')]";
     public static String buttonContacts = "//a[(@href='https://crm.anhtester.com/admin/clients/all_contacts') and (normalize-space()='Contacts')]";
     public static String iconFiltersC = "//i[@class='fa fa-filter']";
@@ -35,7 +35,7 @@ public class LocatorsCRM {
     public static String buttonBurnActions = "//button[(@type='button') and (normalize-space()='Bulk Actions')]";
     public static String refreshCustomer = "//i[@class='fa fa-refresh']";
 
-    //New Customer page
+    //New Customer pages
     public static String buttonQuickCreate = "//li[contains(@class,'icon tw-relative')]";
 
     //Customer Details tab
@@ -78,7 +78,7 @@ public class LocatorsCRM {
 
     //Projects page
     public static String menuProject = "//aside[@id='menu']/descendant::span[normalize-space()='Projects']";
-    public static String headerProject = "//div[@class='col-md-12']/descendant::span[normalize-space()='Projects Summary']";
+    public static String headerProjectPage = "//div[@class='col-md-12']/descendant::span[normalize-space()='Projects Summary']";
     public static String searchBoxHeaderP = "//div[@id='top_search']/child::input";
     public static String buttonSearchP = "//div[@id='top_search']/child::div[@id='top_search_button']/descendant::i";
     public static String buttonNewProject = "(//div[@class='_buttons tw-mb-2 sm:tw-mb-4']/descendant::i)[1]";
@@ -102,15 +102,15 @@ public class LocatorsCRM {
     public static String dropdownlistCustomer = "//label[@for='clientid']/following-sibling::div/button[@aria-owns='bs-select-6']";
     public static String checkboxCalculate = "//div[@class='checkbox checkbox-success']/child::input";
     public static String progressBar = "//div[@class='tab-content tw-mt-3']/descendant::div/span[@class='ui-slider-handle ui-corner-all ui-state-default']";
-    public static String dropdownlistbillingType = "//label[@for='billing_type']/following-sibling::div/select[@id='billing_type']";
-    public static String dropdownlistStatus = "//div/label[@for='status']/following-sibling::div/button[@aria-owns='bs-select-2']";
+    public static String dropdownlistbillingType = "//label[@for='billing_type']/following-sibling::div/button[@data-id='billing_type']";
+    public static String dropdownlistStatus = "//div/label[@for='status']/following-sibling::div/button[@data-id='status']";
     public static String textboxTotalRate = "//div[@id='project_cost']/descendant::input[@id='project_cost']";
     public static String textboxEstimatedHours = "//label[@for='estimated_hours']/following-sibling::input";
-    public static String dropdownlistMember = "//div/label[normalize-space()='Members']/following-sibling::div/select[@id='project_members[]']";
+    public static String dropdownlistMember = "//div/label[normalize-space()='Members']/following-sibling::div/button[@data-id='project_members[]']";
     public static String startdateTextbox = "//label[@for='start_date']/following-sibling::div/input[@id='start_date']";
     public static String startdateDatepicker = "//label[@for='start_date']/following-sibling::div/div[@class='input-group-addon']";
-    public static String dealineTextbox = "//div/label[@for='deadline']/following::div/input[@id='deadline']";
-    public static String dealineDatepicker = "//div/label[@for='deadline']/following::div/div[@class='input-group-addon']";
+    public static String deadlineTextbox = "//div/label[@for='deadline']/following::div/input[@id='deadline']";
+    public static String deadlineDatepicker = "//div/label[@for='deadline']/following::div/div[@class='input-group-addon']";
     public static String tagstextbox = "//label[@for='tags']/following-sibling::ul//input[@class='ui-widget-content ui-autocomplete-input']";
     public static String descriptionFile = "//div[@class='tox-editor-header']//descendant::button/span[normalize-space()='File']";
     public static String descriptionEdit = "//div[@class='tox-editor-header']//descendant::button/span[normalize-space()='Edit']";
@@ -130,8 +130,8 @@ public class LocatorsCRM {
     public static String descriptionAlignRight = "(//div[@role='group']/descendant::span[@class='tox-icon tox-tbtn__icon-wrap'])[7]";
     public static String descriptionJustify = "(//div[@role='group']/descendant::span[@class='tox-icon tox-tbtn__icon-wrap'])[8]";
     public static String descriptionMoreOptions = "(//div[@role='group']/descendant::span[@class='tox-icon tox-tbtn__icon-wrap'])[9]";
-    public static String descriptionTextbox = "//div[@role='application']/descendant::div[@class='tox-edit-area']";
-    public static String sendCreatedemail = "//div[@class='checkbox checkbox-primary tw-mb-0']/child::input[@id='send_created_email']";
+//    public static String descriptionTextbox = "//div[@role='application']/descendant::div//iframe[@id='description_ifr']";
+    public static String checkboxsendCreatedemail = "//input[@id='send_created_email']";
     public static String buttonSaveP = "//div[@class='panel-footer text-right']/child::button[@type='submit']";
 
     //Project Settings tab
