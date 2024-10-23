@@ -131,7 +131,9 @@ public class LocatorsCRM {
     public static String descriptionJustify = "(//div[@role='group']/descendant::span[@class='tox-icon tox-tbtn__icon-wrap'])[8]";
     public static String descriptionMoreOptions = "(//div[@role='group']/descendant::span[@class='tox-icon tox-tbtn__icon-wrap'])[9]";
 //    public static String descriptionTextbox = "//div[@role='application']/descendant::div//iframe[@id='description_ifr']";
-    public static String checkboxsendCreatedemail = "//input[@id='send_created_email']";
+    public static String labelDescription = "//div[@id='tab_project']/child::p[normalize-space()='Description']";
+    public static String checkboxsendCreatedEmail = "//input[@id='send_created_email']";
+    public static String labelSendCreatedEmail = "//label[normalize-space()='Send project created email']";
     public static String buttonSaveP = "//div[@class='panel-footer text-right']/child::button[@type='submit']";
 
     //Project Settings tab

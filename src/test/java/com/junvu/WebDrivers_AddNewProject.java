@@ -93,19 +93,14 @@ public class WebDrivers_AddNewProject extends BaseTest {
         //Xử lý iframe Description
         driver.switchTo().frame("description_ifr");
         driver.findElement(By.xpath("//body[@id='tinymce']//p")).sendKeys("This is an Automation Project which uses Selenium for Java");
-        driver.findElement(By.xpath(""))
+        driver.switchTo().parentFrame();
         Thread.sleep(1000);
 
-
-        //Scroll đến element
-        Thread.sleep(2000);
-        JavascriptExecutor js2 = (JavascriptExecutor) driver;
-        js2.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.xpath("//label[@for='send_created_email']")));
-        driver.findElement(By.xpath(LocatorsCRM.checkboxsendCreatedemail)).click();
+        driver.findElement(By.xpath(LocatorsCRM.checkboxsendCreatedEmail)).click();
         Thread.sleep(1000);
-        boolean isSelected2 = driver.findElement(By.xpath(LocatorsCRM.checkboxsendCreatedemail)).isSelected();
+        boolean isSelected2 = driver.findElement(By.xpath(LocatorsCRM.checkboxsendCreatedEmail)).isSelected();
         if (isSelected2 == false) {
-            driver.findElement(By.xpath(LocatorsCRM.checkboxsendCreatedemail)).click();
+            driver.findElement(By.xpath(LocatorsCRM.checkboxsendCreatedEmail)).click();
         }
 
         //Tab Project Settings
@@ -117,7 +112,7 @@ public class WebDrivers_AddNewProject extends BaseTest {
 
         driver.findElement(By.xpath(LocatorsCRM.projectSettingsTab)).click();
         Thread.sleep(1000);
-
+        //ĐANG LỖI Ở ĐÂY
         driver.findElement(By.xpath(LocatorsCRM.sendContactsNotifications)).click();
         Select select4 = new Select(driver.findElement(By.id("contact_notification")));
         Thread.sleep(1000);
