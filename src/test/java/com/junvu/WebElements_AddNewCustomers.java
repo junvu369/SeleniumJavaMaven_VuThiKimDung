@@ -18,7 +18,7 @@ public class WebElements_AddNewCustomers extends BaseTest {
         Thread.sleep(1000);
 
         //Xác nhận rằng trang hiện tại đang là trang Customer
-        System.out.println(driver.findElement(By.xpath(LocatorsCRM.headerCustomerPage)).getText());
+        System.out.println("Current page is: " + driver.findElement(By.xpath(LocatorsCRM.headerCustomerPage)).getText());
 
         //Add New Customers
         driver.findElement(By.xpath(LocatorsCRM.buttonAddNewCustomer)).click();
@@ -31,7 +31,7 @@ public class WebElements_AddNewCustomers extends BaseTest {
         Thread.sleep(1000);
         driver.findElement(By.xpath("//button[@data-id='groups_in[]']/following-sibling::div//input")).sendKeys("VIP");
 
-        driver.findElement(By.xpath("//a[@id='bs-select-1-14' and normalize-space()='VIP']")).click();
+        driver.findElement(By.xpath("//a[@id='bs-select-1-15' and normalize-space()='VIP']")).click();
         driver.findElement(By.xpath(LocatorsCRM.dropdownlistGroups)).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath(LocatorsCRM.dropdownlistCurrency)).click();
@@ -93,7 +93,6 @@ public class WebElements_AddNewCustomers extends BaseTest {
 
         driver.findElement(By.xpath(LocatorsCRM.buttonSaveC)).click();
         Thread.sleep(3000);
-//        System.out.println(driver.findElement(By.xpath("//div[@id='lightbox' and normalize-space()='Customer updated successfully.']")).getText());
 
         //Kiểm tra lại thông tin customer vừa tạo => Dùng các hàm của WebElement để xác nhận element đó đã tồn tại đúng chưa.
 
@@ -102,18 +101,18 @@ public class WebElements_AddNewCustomers extends BaseTest {
         driver.findElement(By.xpath("//a[normalize-space()='Công ty CP Sunshine Group']")).click();
         System.out.println(driver.findElement(By.xpath("//div[@id='customer_admins_assign']/ancestor::div/h4")).getText());
 
-        System.out.println(driver.findElement(By.xpath("//input[@id='company']")).getAttribute("value"));
-        System.out.println(driver.findElement(By.xpath("//input[@id='vat']")).getAttribute("value"));
-        System.out.println(driver.findElement(By.xpath("//input[@id='phonenumber']")).getAttribute("value"));
-        System.out.println(driver.findElement(By.xpath("//input[@id='website']")).getAttribute("value"));
-        System.out.println(driver.findElement(By.xpath("//button[@data-id='groups_in[]']")).getAttribute("title"));
-        System.out.println(driver.findElement(By.xpath("//button[@data-id='default_currency']")).getAttribute("title"));
-        System.out.println(driver.findElement(By.xpath("//button[@data-id='default_language']")).getAttribute("title"));
-        System.out.println(driver.findElement(By.xpath("//textarea[@id='address']")).getText());
-        System.out.println(driver.findElement(By.xpath("//input[@id='city']")).getAttribute("value"));
-        System.out.println(driver.findElement(By.xpath("//input[@id='state']")).getAttribute("value"));
-        System.out.println(driver.findElement(By.xpath("//input[@id='zip']")).getAttribute("value"));
-        System.out.println(driver.findElement(By.xpath("//button[@data-id='country']")).getAttribute("title"));
+        System.out.println("Company name: " + driver.findElement(By.xpath("//input[@id='company']")).getAttribute("value"));
+        System.out.println("VAT No: " + driver.findElement(By.xpath("//input[@id='vat']")).getAttribute("value"));
+        System.out.println("Phone number: " + driver.findElement(By.xpath("//input[@id='phonenumber']")).getAttribute("value"));
+        System.out.println("Website: " + driver.findElement(By.xpath("//input[@id='website']")).getAttribute("value"));
+        System.out.println("Groups: " + driver.findElement(By.xpath("//button[@data-id='groups_in[]']")).getAttribute("title"));
+        System.out.println("Currency: " + driver.findElement(By.xpath("//button[@data-id='default_currency']")).getAttribute("title"));
+        System.out.println("Language: " + driver.findElement(By.xpath("//button[@data-id='default_language']")).getAttribute("title"));
+        System.out.println("Address: " + driver.findElement(By.xpath("//textarea[@id='address']")).getText());
+        System.out.println("City: " + driver.findElement(By.xpath("//input[@id='city']")).getAttribute("value"));
+        System.out.println("State: " + driver.findElement(By.xpath("//input[@id='state']")).getAttribute("value"));
+        System.out.println("Zip code: " + driver.findElement(By.xpath("//input[@id='zip']")).getAttribute("value"));
+        System.out.println("Country: " + driver.findElement(By.xpath("//button[@data-id='country']")).getAttribute("title"));
 
         //Đóng trình truyệt
         closeDriver();

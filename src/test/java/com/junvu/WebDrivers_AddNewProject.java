@@ -26,7 +26,7 @@ public class WebDrivers_AddNewProject extends BaseTest {
 
         //Xác nhận rằng trang hiện tại đang là trang Project
 
-        System.out.println(driver.findElement(By.xpath(LocatorsCRM.headerProjectPage)).getText());
+        System.out.println("Current page is: " + driver.findElement(By.xpath(LocatorsCRM.headerProjectPage)).getText());
 
         //Tạo 1 project mới
 
@@ -96,6 +96,10 @@ public class WebDrivers_AddNewProject extends BaseTest {
         driver.switchTo().parentFrame();
         Thread.sleep(1000);
 
+        //Scroll đến cuối trang
+        JavascriptExecutor js2 = (JavascriptExecutor) driver;
+        js2.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.xpath(LocatorsCRM.buttonSaveP)));
+        Thread.sleep(1000);
         driver.findElement(By.xpath(LocatorsCRM.checkboxsendCreatedEmail)).click();
         Thread.sleep(1000);
         boolean isSelected2 = driver.findElement(By.xpath(LocatorsCRM.checkboxsendCreatedEmail)).isSelected();
@@ -112,17 +116,19 @@ public class WebDrivers_AddNewProject extends BaseTest {
 
         driver.findElement(By.xpath(LocatorsCRM.projectSettingsTab)).click();
         Thread.sleep(1000);
+        
         //ĐANG LỖI Ở ĐÂY
-        driver.findElement(By.xpath(LocatorsCRM.sendContactsNotifications)).click();
+        driver.findElement(By.xpath(LocatorsCRM.dropdownsendContactsNotifications)).click();
+        Thread.sleep(1000);
         Select select4 = new Select(driver.findElement(By.id("contact_notification")));
+        select4.selectByVisibleText("Do not send notifications");
         Thread.sleep(1000);
-        select4.selectByVisibleText("To all contacts with notifications for projects enabled");
 
-        driver.findElement(By.xpath(LocatorsCRM.visibleTabs)).click();
-        Select select5 = new Select(driver.findElement(By.id("available_features")));
+        driver.findElement(By.xpath(LocatorsCRM.dropdownvisibleTabs)).click();
         Thread.sleep(1000);
+        Select select5 = new Select(driver.findElement(By.id("available_features")));
         driver.findElement(By.xpath("//select[@id='available_features']/following-sibling::div//button[normalize-space()='Select All']")).click();
-        driver.findElement(By.xpath(LocatorsCRM.visibleTabs)).click();
+        driver.findElement(By.xpath(LocatorsCRM.dropdownvisibleTabs)).click();
 
         driver.findElement(By.xpath(LocatorsCRM.allowCustomerToViewTasks)).click();
         Thread.sleep(1000);
@@ -144,13 +150,24 @@ public class WebDrivers_AddNewProject extends BaseTest {
         if (isSelected == false) {
             driver.findElement(By.xpath(LocatorsCRM.allowCustomerToUploadFiles)).click();
         }
-
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         driver.findElement(By.xpath(LocatorsCRM.buttonSaveP)).click();
+        Thread.sleep(3000);
 
+        //Kiểm tra lại thông tin project vừa tạo => Dùng các hàm của WebElement để xác nhận element đó đã tồn tại đúng chưa.
+        System.out.println("Customer name: " + driver.findElement(By.xpath("//div/dt[normalize-space()='Customer']/following-sibling::dd/a")).getText());
+        System.out.println("Billing Type: " + driver.findElement(By.xpath("//div/dt[normalize-space()='Billing Type']/following-sibling::dd")).getText());
+        System.out.println("Total Rate: " + driver.findElement(By.xpath("//div/dt[normalize-space()='Total Rate']/following-sibling::dd")).getText());
+        System.out.println("Status: " + driver.findElement(By.xpath("//div/dt[normalize-space()='Status']/following-sibling::dd")).getText());
+        System.out.println("Date Created: " + driver.findElement(By.xpath("//div/dt[normalize-space()='Date Created']/following-sibling::dd")).getText());
+        System.out.println("Start Date: " + driver.findElement(By.xpath("//div/dt[normalize-space()='Start Date']/following-sibling::dd")).getText());
+        System.out.println("Deadline: " + driver.findElement(By.xpath("//div/dt[normalize-space()='Deadline']/following-sibling::dd")).getText());
+        System.out.println("Estimated Hours: " + driver.findElement(By.xpath("//div/dt[normalize-space()='Estimated Hours']/following-sibling::dd")).getText());
+        System.out.println("Tags: " + driver.findElement(By.xpath("//div/dt[normalize-space()='Tags']/following-sibling::dd//span[normalize-space()='Selenium']")).getText());
+        System.out.println("Description: " + driver.findElement(By.xpath("//div/dt[normalize-space()='Description']/following-sibling::dd/p")).getText());
 
         //Đóng trình duyệt
-//        closeDriver();
+        closeDriver();
     }
 }

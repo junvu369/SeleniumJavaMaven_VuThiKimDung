@@ -130,7 +130,6 @@ public class LocatorsCRM {
     public static String descriptionAlignRight = "(//div[@role='group']/descendant::span[@class='tox-icon tox-tbtn__icon-wrap'])[7]";
     public static String descriptionJustify = "(//div[@role='group']/descendant::span[@class='tox-icon tox-tbtn__icon-wrap'])[8]";
     public static String descriptionMoreOptions = "(//div[@role='group']/descendant::span[@class='tox-icon tox-tbtn__icon-wrap'])[9]";
-//    public static String descriptionTextbox = "//div[@role='application']/descendant::div//iframe[@id='description_ifr']";
     public static String labelDescription = "//div[@id='tab_project']/child::p[normalize-space()='Description']";
     public static String checkboxsendCreatedEmail = "//input[@id='send_created_email']";
     public static String labelSendCreatedEmail = "//label[normalize-space()='Send project created email']";
@@ -138,8 +137,8 @@ public class LocatorsCRM {
 
     //Project Settings tab
     public static String projectSettingsTab = "(//ul[@class='nav nav-tabs nav-tabs-horizontal']/li[@role='presentation']/child::a)[2]";
-    public static String sendContactsNotifications = "//label[@for='contact_notification']/following-sibling::div/select[@id='contact_notification']";
-    public static String visibleTabs = "//div/label[normalize-space()='Visible Tabs']/following-sibling::div/select[@id='available_features']";
+    public static String dropdownsendContactsNotifications = "//label[@for='contact_notification']/following-sibling::div/button[@data-id='contact_notification']";
+    public static String dropdownvisibleTabs = "//label[@for='available_features']/following-sibling::div/button[@data-id='available_features']";
     public static String allowCustomerToViewTasks = "//div[@class='checkbox']/child::input[@id='view_tasks']";
     public static String allowCustomerToCreateTasks = "//div[@class='checkbox']/child::input[@id='create_tasks']";
     public static String allowCustomerToEditTasks = "//div[@class='checkbox']/child::input[@id='edit_tasks']";
