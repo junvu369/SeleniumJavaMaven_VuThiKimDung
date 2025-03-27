@@ -91,9 +91,6 @@ public class WebDrivers_AddNewProject extends BaseTest {
         Thread.sleep(1000);
 
         //Xử lý iframe Description
-        driver.switchTo().frame("description_ifr");
-        driver.findElement(By.xpath("//body[@id='tinymce']//p")).sendKeys("This is an Automation Project which uses Selenium for Java");
-        driver.switchTo().parentFrame();
         Thread.sleep(1000);
 
         //Scroll đến cuối trang
